@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.text.Font?>
+
+<GridPane prefHeight="300.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.OutfitEditorScreenController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+      <RowConstraints prefHeight="260.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <ToolBar prefHeight="40.0" prefWidth="435.0">
+         <items>
+            <AnchorPane prefHeight="40.0" prefWidth="423.0">
+               <children>
+                  <Button fx:id="saveButton" layoutX="396.0" layoutY="8.0" mnemonicParsing="false" text="Save" />
+                  <Button fx:id="cancelButton" cancelButton="true" layoutX="338.0" layoutY="8.0" mnemonicParsing="false" text="Cancel" />
+                  <TextField fx:id="outfitNameTextField" alignment="CENTER" layoutX="-6.0" layoutY="8.0" prefHeight="37.0" prefWidth="338.0" promptText="Enter an Outfit Name" text="Outfit Name" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="-3.0" AnchorPane.topAnchor="4.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+               </children>
+            </AnchorPane>
+         </items>
+      </ToolBar>
+      <GridPane prefHeight="260.0" prefWidth="413.0" GridPane.rowIndex="1">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.0" minWidth="10.0" prefWidth="250.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="210.0" minWidth="10.0" prefWidth="200.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <AnchorPane prefWidth="450.0">
+               <children>
+                  <ScrollPane hbarPolicy="NEVER" layoutY="5.0" prefHeight="255.0" prefWidth="250.0" vbarPolicy="ALWAYS">
+                     <content>
+                        <TilePane fx:id="outfitSlotsDisplayTilePane" alignment="TOP_CENTER" prefHeight="266.0" prefWidth="234.0">
+                           <children>
+                              <AnchorPane>
+                                 <children>
+                                    <Button fx:id="outerTopButton" contentDisplay="TOP" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="117.0" prefWidth="117.0" text="Outer Top">
+                                       <graphic>
+                                          <ImageView fx:id="outerTopImageView" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../resources/plus-icon.jpg" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="outerTopRemover" mnemonicParsing="false" text="X" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane>
+                                 <children>
+                                    <Button fx:id="innerTopButton" contentDisplay="TOP" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="117.0" prefWidth="117.0" text="Inner Top">
+                                       <graphic>
+                                          <ImageView fx:id="innerTopImageView" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../resources/plus-icon.jpg" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="innerTopRemover" mnemonicParsing="false" text="X" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane>
+                                 <children>
+                                    <Button fx:id="bottomButton" contentDisplay="TOP" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="117.0" prefWidth="117.0" text="Bottom">
+                                       <graphic>
+                                          <ImageView fx:id="bottomImageView" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../resources/plus-icon.jpg" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="bottomRemover" mnemonicParsing="false" text="X" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane>
+                                 <children>
+                                    <Button fx:id="footwearButton" contentDisplay="TOP" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="117.0" prefWidth="117.0" text="Footwear">
+                                       <graphic>
+                                          <ImageView fx:id="footwearImageView" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../resources/plus-icon.jpg" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="footwearRemover" mnemonicParsing="false" text="X" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane>
+                                 <children>
+                                    <Button fx:id="accessoryOneButton" contentDisplay="TOP" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="117.0" prefWidth="117.0" text="Accessory One">
+                                       <graphic>
+                                          <ImageView fx:id="accessoryOneImageView" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../resources/plus-icon.jpg" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="accessoryOneRemover" mnemonicParsing="false" text="X" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane>
+                                 <children>
+                                    <Button fx:id="accessoryTwoButton" contentDisplay="TOP" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="117.0" prefWidth="117.0" text="Accessory Two">
+                                       <graphic>
+                                          <ImageView fx:id="accessoryTwoImageView" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../resources/plus-icon.jpg" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="accessoryTwoRemover" mnemonicParsing="false" text="X" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane>
+                                 <children>
+                                    <Button fx:id="accessoryThreeButton" contentDisplay="TOP" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="117.0" prefWidth="117.0" text="Accessory Three">
+                                       <graphic>
+                                          <ImageView fx:id="accessoryThreeImageView" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../resources/plus-icon.jpg" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="accessoryThreeRemover" mnemonicParsing="false" text="X" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane>
+                                 <children>
+                                    <Button fx:id="accessoryFourButton" contentDisplay="TOP" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="117.0" prefWidth="117.0" text="Accessory Four">
+                                       <graphic>
+                                          <ImageView fx:id="accessoryFourImageView" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../resources/plus-icon.jpg" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="accessoryFourRemover" mnemonicParsing="false" text="X" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane>
+                                 <children>
+                                    <Button fx:id="accessoryFiveButton" contentDisplay="TOP" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="117.0" prefWidth="117.0" text="Accessory Five">
+                                       <graphic>
+                                          <ImageView fx:id="accessoryFiveImageView" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../resources/plus-icon.jpg" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="accessoryFiveRemover" mnemonicParsing="false" text="X" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </TilePane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <Button fx:id="deleteButton" layoutX="58.0" layoutY="234.0" mnemonicParsing="false" style="-fx-background-color: #CB4C4E;" text="Delete Outfit" AnchorPane.bottomAnchor="5.0" />
+                  <Label layoutX="30.0" layoutY="91.0" prefHeight="79.0" prefWidth="142.0" text="Select an Outfit Slot to start making changes to it." wrapText="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <ScrollPane fx:id="apparelSelectorScrollPane" hbarPolicy="NEVER" layoutX="1.0" layoutY="26.0" prefHeight="180.0" prefWidth="200.0" vbarPolicy="ALWAYS" visible="false" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="26.0">
+                     <content>
+                        <TilePane fx:id="apparelSelectorTilePane" hgap="1.0" maxWidth="740.0" prefHeight="195.0" prefTileHeight="91.0" prefTileWidth="91.0" prefWidth="185.0" vgap="1.0">
+                           <children>
+                              <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" maxHeight="100.0" maxWidth="100.0" mnemonicParsing="false" text="Button">
+                                 <graphic>
+                                    <ImageView fitHeight="75.0" fitWidth="75.0">
+                                       <image>
+                                          <Image url="@../resources/no-image-icon.jpg" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets left="1.0" right="1.0" top="1.0" />
+                           </padding>
+                        </TilePane>
+                     </content>
+                  </ScrollPane>
+                  <Label fx:id="selectedSlotLabel" layoutX="36.0" layoutY="4.0" text="Selected Outfit Slot" visible="false" AnchorPane.topAnchor="5.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+   </children>
+</GridPane>
